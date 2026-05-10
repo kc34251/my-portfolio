@@ -1,5 +1,5 @@
 import Sidebar from './Sidebar'
-import artist from './assets/artist.jpeg'
+import artist from './assets/Artist.jpeg'
 
 export default function ArtistStatement() {
   return (
