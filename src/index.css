@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #0f172a; /* slate-900 */
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #374151; /* slate-700 */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #111827; /* slate-900 */
+}
+.enter-button {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.enter-button:hover {
+  color: black;
+  background: white;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body.no-scroll {
+  overflow: hidden;
+} 
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #2563eb;
+} 
+/* Hide default browser focus outlines when focus comes from mouse/touch, keep focus-visible for keyboard users */
+button:focus:not(:focus-visible),
+button:focus:not(:focus-visible) * {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove inner Firefox focus border */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* Remove tap highlight on mobile */
+button, a, input, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hero nav: hide large outlines on the outer control and reveal small inner button on hover or focus */
+.hero-nav {
+  -webkit-tap-highlight-color: transparent;
+}
+.hero-nav:focus,
+.hero-nav:focus-visible,
+.hero-nav:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.hero-nav:hover .hero-inner,
+.hero-nav:focus .hero-inner,
+.hero-nav:focus-visible .hero-inner,
+.hero-nav:active .hero-inner {
+  opacity: 1 !important;
+}
+.hero-inner {
+  transition: opacity 160ms ease, box-shadow 160ms ease;
+}
+.hero-nav:focus-visible .hero-inner {
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.08), 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Keep Tailwind focus-visible rings intact for keyboard navigation */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  button {
+    background-color: #1a1a1a;
+  }
+}
+
+/* Hide native scrollbar while still allowing scrolling (used during hero) */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari/WebKit */
+}
+
+/* Improve title contrast on images without adding shadows */
+.title-contrast {
+  color: #000000;
+  -webkit-text-stroke: 0.6px rgba(255, 255, 255, 0.95);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 1024px) {
+  .title-contrast {
+    -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.95);
+  }
+}
+button:focus,
+button:active,
+button:focus-visible,
+a:focus,
+a:active,
+a:focus-visible,
+input:focus,
+textarea:focus,
+select:focus,
+summary:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
