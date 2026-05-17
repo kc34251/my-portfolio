@@ -199,8 +199,8 @@ export default function Landing() {
           className="absolute inset-0 bg-contain bg-center"
         />
 
-       {/* Enter button moved closer to middle on portrait mobile */}
-        <div className="absolute enter-button-wrapper z-50">
+        {/* Enter button 3/4 down center */}
+        <div className="absolute left-1/2 top-[75%] -translate-x-1/2 -translate-y-1/2 z-50">
           <Link
             to="/gallery"
             className="enter-button"
