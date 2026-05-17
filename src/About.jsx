@@ -6,7 +6,7 @@ export default function About() {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="lg:ml-64 md:ml-48 ml-32 px-6 py-8">
+      <div className="page-content lg:ml-64 md:ml-48 ml-32 px-6 py-8">
         <h1 className="text-4xl font-bold mb-6">About</h1>
         <div className="text-lg text-gray-700 space-y-6">
   <p>

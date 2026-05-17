@@ -7,7 +7,7 @@ export default function ArtistStatement() {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="lg:ml-64 md:ml-48 ml-32 px-6 py-8">
+      <div className="page-content lg:ml-64 md:ml-48 ml-32 px-6 py-8">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-6 text-center">Artist Statement</h1>
           <div className="flex justify-center lg:justify-end">

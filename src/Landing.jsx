@@ -122,6 +122,14 @@ export default function Landing() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % artworks.length)
+    }, 7000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   function nextHero() {
     setHeroIndex((i) => (i + 1) % artworks.length)
   }
@@ -171,8 +179,8 @@ export default function Landing() {
           className="absolute inset-0 bg-contain bg-center"
         />
 
-       {/* Enter button at bottom middle */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-50">
+       {/* Enter button moved closer to middle on portrait mobile */}
+        <div className="absolute enter-button-wrapper left-1/2 -translate-x-1/2 z-50">
           <Link
             to="/gallery"
             className="enter-button"

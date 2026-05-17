@@ -132,7 +132,7 @@ export default function Gallery() {
       <Sidebar size="small" showSocial={true} />
 
       {/* Main Content */}
-      <div className="lg:ml-64 md:ml-48 ml-24">
+      <div className="lg:ml-64 md:ml-48 ml-0 pt-28 md:pt-0">
         <section className="w-full px-6 py-8">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
             {artworks.map((a) => (

@@ -145,20 +145,12 @@ export default function Artwork() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
       {/* Sidebar */}
-      <Sidebar position="left" showSocial={false}>
-        <div className="space-y-2">
-          <h2 className="text-2xl font-semibold text-black">{artwork.title}</h2>
-          <p className="text-lg text-gray-700">{artwork.size}</p>
-          <p className="text-lg text-gray-700">{artwork.medium}</p>
-          <p className="text-lg text-gray-700">{artwork.year}</p>
-
-        </div>
-      </Sidebar>
+      <Sidebar position="left" showSocial={true} />
 
       {/* Main Content */}
-      <div className="lg:ml-64 md:ml-48 ml-32 px-6 py-8">
+      <div className="lg:ml-64 md:ml-48 ml-0 px-6 py-8 pt-28 md:pt-0">
         <div className="max-w-4xl mx-auto">
-        <div className="portrait:h-[95vh] landscape:h-[80vh] flex items-center justify-center">
+          <div className="portrait:h-[95vh] landscape:h-[80vh] flex items-center justify-center">
           <img
             src={artwork.src}
             alt={artwork.alt}
@@ -167,7 +159,16 @@ export default function Artwork() {
             loading="lazy"
           />
         </div>
-      </div>
+
+          <div className="artwork-detail-text mt-8 text-slate-800">
+            <h2 className="text-2xl font-semibold mb-4">{artwork.title}</h2>
+            <div className="space-y-2 text-lg leading-8">
+              <p><span className="font-semibold">Medium:</span> {artwork.medium}</p>
+              <p><span className="font-semibold">Year:</span> {artwork.year}</p>
+              <p><span className="font-semibold">Size:</span> {artwork.size}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )

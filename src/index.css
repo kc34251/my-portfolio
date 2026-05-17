@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,11 +30,13 @@ a:hover {
 .enter-button {
   color: white;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 1rem 2rem;
   font-size: 1.5rem;
+  letter-spacing: 0.35em;
   text-decoration: none;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .enter-button:hover {
@@ -157,4 +161,13 @@ summary:focus {
   outline: none !important;
   box-shadow: none !important;
   border-color: transparent !important;
+}
+
+.sidebar-title,
+.sidebar-menu a {
+  font-family: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+}
+
+.artwork-detail-text {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
