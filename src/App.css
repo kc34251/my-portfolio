@@ -71,8 +71,11 @@
 
 @media (orientation: portrait) and (max-width: 1024px) {
   .enter-button-wrapper {
-    top: 55% !important;
+    position: absolute !important;
+    left: 48% !important;
+    top: 62% !important;
     bottom: auto !important;
+    width: fit-content !important;
     transform: translate(-50%, -50%) !important;
   }
 
@@ -164,6 +167,12 @@
 
   .sidebar-menu nav a {
     display: block;
+  }
+
+  /* Center social icons in portrait dropdown */
+  .sidebar-social-links {
+    justify-content: center !important;
+    width: 100% !important;
   }
 }
 

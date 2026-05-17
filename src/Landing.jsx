@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import slide1 from './assets/Mantra.webp'
 import slide2 from './assets/MOSHPIT.webp'
@@ -107,6 +107,7 @@ const artworks = [
 export default function Landing() {
   const [heroIndex, setHeroIndex] = useState(0)
   const [touchStartX, setTouchStartX] = useState(null)
+  const intervalRef = useRef(null)
 
   useEffect(() => {
     document.body.classList.add('no-scroll')
@@ -115,26 +116,44 @@ export default function Landing() {
 
   useEffect(() => {
     function onKey(e) {
-      if (e.key === 'ArrowRight') setHeroIndex((i) => (i + 1) % artworks.length)
-      if (e.key === 'ArrowLeft') setHeroIndex((i) => (i - 1 + artworks.length) % artworks.length)
+      if (e.key === 'ArrowRight') {
+        setHeroIndex((i) => (i + 1) % artworks.length)
+        resetInterval()
+      }
+      if (e.key === 'ArrowLeft') {
+        setHeroIndex((i) => (i - 1 + artworks.length) % artworks.length)
+        resetInterval()
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    startInterval()
+    return () => clearInterval(intervalRef.current)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function startInterval() {
+    clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
       setHeroIndex((i) => (i + 1) % artworks.length)
     }, 7000)
+  }
 
-    return () => clearInterval(interval)
-  }, [])
+  function resetInterval() {
+    startInterval()
+  }
 
   function nextHero() {
     setHeroIndex((i) => (i + 1) % artworks.length)
+    resetInterval()
   }
+
   function prevHero() {
     setHeroIndex((i) => (i - 1 + artworks.length) % artworks.length)
+    resetInterval()
   }
 
   function onTouchStart(e) {
@@ -171,6 +190,7 @@ export default function Landing() {
         className="fixed inset-0 z-40 w-full h-screen overflow-hidden select-none"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
+        onClick={resetInterval}
         aria-roledescription="carousel"
         aria-label="Featured artwork"
       >
@@ -180,7 +200,7 @@ export default function Landing() {
         />
 
        {/* Enter button moved closer to middle on portrait mobile */}
-        <div className="absolute enter-button-wrapper left-1/2 -translate-x-1/2 z-50">
+        <div className="absolute enter-button-wrapper z-50">
           <Link
             to="/gallery"
             className="enter-button"

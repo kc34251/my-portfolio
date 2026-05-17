@@ -160,7 +160,7 @@ export default function Artwork() {
           />
         </div>
 
-          <div className="artwork-detail-text mt-8 text-slate-800">
+          <div className="artwork-detail-text mt-2 md:mt-8 text-slate-800">
             <h2 className="text-2xl font-semibold mb-4">{artwork.title}</h2>
             <div className="space-y-2 text-lg leading-8">
               <p><span className="font-semibold">Medium:</span> {artwork.medium}</p>
