@@ -104,6 +104,11 @@
 
   .sidebar-title {
     margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .sidebar-title br {
+    display: none;
   }
 
   .sidebar-toggle {
@@ -197,6 +202,15 @@
     padding-top: 6.5rem !important;
   }
 
+  .sidebar-header {
+    justify-content: flex-start !important;
+  }
+
+  .sidebar-title {
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+
   .sidebar-social-links {
     width: 100% !important;
     justify-content: flex-start !important;
@@ -210,5 +224,16 @@
     right: auto !important;
     bottom: auto !important;
     transform: translate(-50%, -50%) !important;
+  }
+}
+
+@media (orientation: landscape) {
+  .sidebar-header {
+    justify-content: flex-start !important;
+  }
+
+  .sidebar-title {
+    text-align: left !important;
+    align-self: flex-start !important;
   }
 }

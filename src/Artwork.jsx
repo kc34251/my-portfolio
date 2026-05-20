@@ -52,8 +52,8 @@ const artworks = [
     id: 5,
     title: 'Mirage',
     year: 2025,
-    medium: 'Placeholder',
-    size: 'Placeholder',
+    medium: 'charcoal, water color & gesso on paper',
+    size: '46 X 32 in',
     src: slide5,
     alt: 'mirage artwork',
   },
@@ -150,11 +150,11 @@ export default function Artwork() {
       {/* Main Content */}
       <div className="lg:ml-64 md:ml-48 ml-0 px-6 py-8 pt-28 md:pt-0">
         <div className="max-w-4xl mx-auto">
-          <div className="portrait:h-[95vh] landscape:h-[80vh] flex items-center justify-center">
+          <div className="portrait:h-auto landscape:h-[80vh] flex items-center justify-center portrait:mb-4">
           <img
             src={artwork.src}
             alt={artwork.alt}
-            className="max-h-full max-w-full object-contain cursor-pointer"
+            className="max-h-full max-w-full portrait:max-h-[65vh] object-contain cursor-pointer"
             onClick={handleImageClick}
             loading="lazy"
           />

@@ -3,7 +3,7 @@ import artist from './assets/Artist.jpeg'
 
 export default function ArtistStatement() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
+    <main className="min-h-screen bg-white text-slate-900 cormorant">
       <Sidebar />
 
       {/* Main Content */}

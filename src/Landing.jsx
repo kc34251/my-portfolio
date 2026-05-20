@@ -179,7 +179,7 @@ export default function Landing() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <main className="min-h-[100dvh] min-h-screen bg-black text-white overflow-hidden">
       {/* CHRISMFCHEN text in top left */}
       <div className="absolute top-6 left-6 z-50 font-serif text-red-500 text-4xl">
         CHRISMFCHEN
@@ -187,7 +187,7 @@ export default function Landing() {
 
       {/* Fullscreen hero carousel */}
       <section
-        className="fixed inset-0 z-40 w-full h-screen overflow-hidden select-none"
+        className="fixed inset-0 z-40 w-full h-[100dvh] overflow-hidden select-none"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
         onClick={resetInterval}

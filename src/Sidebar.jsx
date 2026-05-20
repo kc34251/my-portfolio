@@ -83,7 +83,7 @@ export default function Sidebar({ children, size = "default", position = "left",
         </a>
 
         <a
-          href="https://www.facebook.com/chrismfchenarts"
+          href="https://www.facebook.com/chrismfchen"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"

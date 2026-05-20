@@ -2,7 +2,7 @@ import Sidebar from './Sidebar'
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
+    <main className="min-h-screen bg-white text-slate-900 cormorant">
       {/* Sidebar */}
       <Sidebar />
 
