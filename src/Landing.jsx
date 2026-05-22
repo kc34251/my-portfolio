@@ -248,7 +248,7 @@ export default function Landing() {
         {/* caption (pager removed) */}
         <div className="absolute left-6 bottom-6 text-white z-50">
           <div className="text-sm opacity-90">{artworks[heroIndex].medium} • {artworks[heroIndex].year}</div>
-          <div className="text-xl font-semibold">{artworks[heroIndex].title}</div>
+          <div className="text-xl font-semibold text-left">{artworks[heroIndex].title}</div>
         </div>
       </section>
     </main>

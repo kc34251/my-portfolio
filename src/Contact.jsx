@@ -14,7 +14,7 @@ export default function Contact() {
         </p>
         <div className="space-y-2">
           <p><strong>Email:</strong> chris.chen0429@gmail.com</p>
-          <p><strong>Instagram:</strong> <a href="https://instagram.com/chrismfchen" className="text-blue-600 hover:underline">@chrismfchenarts</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/chrismfchen" className="text-blue-600 hover:underline">@chrismfchen</a></p>
         </div>
       </div>
     </main>
